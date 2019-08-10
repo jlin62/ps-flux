@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 // import { Prompt } from "react-router-dom";
 import CourseForm from "./CourseForm";
 import * as courseApi from "../api/courseApi";
+import * as authorApi from "../api/authorApi";
 import { toast } from "react-toastify";
 
 const ManageCoursePage = props => {
-  //   debugger;
+  // debugger;
   //first item is what we want to store in the state, the second item is the setter
   //this is called array destructuring
   const [errors, setErrors] = useState({});
@@ -17,11 +18,11 @@ const ManageCoursePage = props => {
     category: ""
   });
 
-  const authorOptions = [
-    { value: "", name: "" },
-    { value: "1", name: "Cory House" },
-    { value: "2", name: "Scott Allen" }
-  ];
+  const [authors, setAuthors] = useState([]);
+
+  useEffect(() => {
+    authorApi.getAuthors().then(_authors => setAuthors(_authors));
+  }, []);
 
   useEffect(() => {
     const slug = props.match.params.slug; // from the path `/courses/:slug`
@@ -77,7 +78,7 @@ const ManageCoursePage = props => {
         course={course}
         onChange={handleChange}
         onSubmit={handleSubmit}
-        authorOptions={authorOptions}
+        authors={authors}
       />
     </>
   );

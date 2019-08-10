@@ -17,9 +17,10 @@ function Select(props) {
           value={props.value}
           className="form-control"
         >
+          <option value="" />
           {props.options.map((e, key) => {
             return (
-              <option key={key} value={e.value}>
+              <option key={key} value={e.id}>
                 {e.name}
               </option>
             );

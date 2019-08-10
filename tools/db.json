@@ -72,19 +72,19 @@
     },
     {
       "id": 11,
-      "slug": "test_error_handling",
-      "title": "test_error_handling",
-      "authorId": 1,
+      "slug": "test",
+      "title": "test",
+      "authorId": 2,
       "category": "test",
-      "createdAt": 1565427318753
+      "createdAt": 1565434910672
     },
     {
       "id": 12,
-      "slug": "test_selectinput",
-      "title": "test_selectInput",
-      "authorId": 1,
+      "slug": "test",
+      "title": "test",
+      "authorId": 3,
       "category": "test",
-      "createdAt": 1565429406082
+      "createdAt": 1565434936491
     },
     {
       "id": 13,
@@ -92,15 +92,7 @@
       "title": "test",
       "authorId": 1,
       "category": "test",
-      "createdAt": 1565431433380
-    },
-    {
-      "id": 14,
-      "slug": "test-select",
-      "title": "test-select",
-      "authorId": 2,
-      "category": "test",
-      "createdAt": 1565431517692
+      "createdAt": 1565435153876
     }
   ],
   "authors": [

@@ -43,7 +43,7 @@ function CourseForm(props) {
         onChange={props.onChange}
         value={props.course.authorId || ""}
         error={props.errors.authorId}
-        options={props.authorOptions}
+        options={props.authors}
       />
 
       <TextInput
