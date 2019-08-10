@@ -8,24 +8,7 @@ function CoursesPage() {
   useEffect(() => {
     getCourses().then(_courses => setCourses(_courses));
   }, []);
-  //Doing the same thing
-  //   constructor(props) {
-  //     super(props);
-  //     this.state = {
-  //       courses: []
-  //     };
 
-  //   state = {
-  //     courses: []
-  //   };
-
-  //   componentDidMount() {
-  //     //Doing the same thing
-  //     getCourses().then(courses => this.setState({ courses: courses }));
-  //     // getCourses().then(function(courses) {
-  //     //   this.setState({ courses: courses });
-  //     // });
-  //   }
   return (
     <>
       <h2>Courses</h2>
