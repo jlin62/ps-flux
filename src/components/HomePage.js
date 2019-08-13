@@ -1,15 +1,30 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import ControlPanel from "./common/ControlPanels";
+import LogsPage from "./LogsPage";
 
 function HomePage() {
+  const [id, setId] = useState({});
+  const [showLogsState, setShowLogsState] = useState({
+    showLogsState: false
+  });
+
+  function handleClick(event) {
+    // debugger;
+    // event.preventDefault();
+    const newId = { ...id, [event.currentTarget.name]: event.currentTarget.id };
+    // setId(event.currentTarget.id);
+    setId(newId);
+    setShowLogsState(!showLogsState);
+    console.log(id);
+    console.log(showLogsState);
+  }
   return (
-    <div className="jumbotron">
-      <h1>Pluralsight Administration</h1>
-      <p>React, Flux, and React Router for ultra-responsive web apps</p>
-      <Link to="about" className="btn btn-primary">
-        About
-      </Link>
-    </div>
+    <>
+      <div>
+        <ControlPanel onClick={handleClick} />
+      </div>
+      <div>{!showLogsState && <LogsPage logId={id} />}</div>
+    </>
   );
 }
 
