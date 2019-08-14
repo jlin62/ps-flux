@@ -65,6 +65,7 @@ function ControlPanel(props) {
                 size="small"
                 color="primary"
                 id="microservice-1"
+                name="button"
                 onClick={props.onClick}
               >
                 Learn More

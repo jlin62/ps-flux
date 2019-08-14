@@ -4,7 +4,7 @@ function LogsPage(props) {
   return (
     // <> is same as <React.Fragment>
     <>
-      <p>Display the logs for {props.logId.button}</p>
+      <p>Display the logs for {props.logId}</p>
     </>
   );
 }
